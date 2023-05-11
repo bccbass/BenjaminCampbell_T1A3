@@ -2,8 +2,8 @@
 # Yahtzee!      
 ### Benjamin Campbell • Assignment T1A3 • May 11, 2023
 
-![Photo credit: Colin Davis *Unsplash*](./docs/colin-davis-y4jLm31tdI4-unsplash.jpg)
-Photo credit: Colin Davis *Unsplash*
+![Photo credit: Colin Davis *Unsplash*](./docs/yahtzee-title-screen.png)
+
 ## Project Links:
 - [Github Repository](https://github.com/bccbass/T1A3-src)
 - [Project Management (Trello)](https://trello.com/b/LXnmqhk8/terminal-app)
@@ -52,11 +52,12 @@ Planning and implementing the approach and execution was of paramount importance
 ![feature 3](./docs/feature-progress/first-update/Screenshot%202023-05-05%20at%209.34.45%20AM.png)
 ![feature 4](./docs/feature-progress/first-update/Screenshot%202023-05-05%20at%209.35.01%20AM.png)
 
-    Features each contained a list of actions necessary for implemenation and the overall feature had a due date attached.
+Features each contained a list of actions necessary for implemenation and the overall feature had a due date attached.
 
 - ### Overview of Trello:
 ![overview](./docs/feature-progress/first-update/Screenshot%202023-05-05%20at%209.35.20%20AM.png)
-    In addition to the Features and their corresponding actions, a to-do list of more general needs was created in the first stages as well. Each item contained a card with details for implemention as well as a due date to ensure smooth preject flow. 
+
+In addition to the Features and their corresponding actions, a to-do list of more general needs was created in the first stages as well. Each item contained a card with details for implemention as well as a due date to ensure smooth preject flow. 
 
 - ### Trello Resources:
 ![Resources](./docs/feature-progress/Screenshot%202023-05-11%20at%206.44.09%20PM.png)
@@ -68,8 +69,68 @@ The board also had sections to keep track of ideas for modules, approaches and e
     
 - ### Second Progress Update:
 ![second-update](./docs/feature-progress/Screenshot%202023-05-09%20at%208.57.53%20AM.png)
-    Second update. Note a Bugs to Fix section was added to keep track of the many snags encountered in development.
+
+Second update. Note a Bugs to Fix section was added to keep track of the many snags encountered in development.
 
 - ### Third Progress Update:
 ![third-update](./docs/feature-progress/Screenshot%202023-05-10%20at%203.28.57%20PM.png)
+
 At this stage from May 10, 2023 all of the main features have been implemented and there is a working game that is very close to the MVP outlined in the [initial project proposal](./docs/initial-project-proposal.md). 
+
+
+## Help Documentation:
+
+### **System requirements:**
+- Any computer capable of running Python 3.10 or higher
+- Python 3.10 or higher installed on the machine
+- Any Terminal application with a minimum view width of 110 columns
+
+**********
+### Setup configuration and Gameplay:  
+
+
+1. **Check Python Install Status**: In order to run Yahtzee Python 3.10 or higher must be installed.
+
+    To check if Python is installed locally and verify current version:
+    ```
+    python --version
+    ```
+    This should return a message that looks like this:
+    ```
+    Python 3.11.3
+    ```  
+    If Python is not installed or is older lower than 3.10 please vist Python's [download page](https://www.python.org/downloads/) for more information including download access and installation instructions.  
+
+    https://www.python.org/downloads/  
+
+
+2. **Download and Install Yahtzee**: To install and play Yahtzee download the src directory directly from GitHub or locate it in the project directory after unzipping BenjaminCampbell_T1A3.zip.
+
+3. **Play Yahtzee**: 
+     Open a new Terminal window and navigate to the src folder. This navigation is different depending on where a folder is located in the users home directory, however the navigation commands may look something like this:
+    ```
+     cd user/downloads/BenjaminCampbell_T1A3/src
+    ```
+
+    From ```src``` directory in any terminal window enter:
+    ```
+    ./yahtzee.sh
+    ```
+    This command will activate a virtual environment, install the required dependencies and run the program in python.
+
+4. **Play Yahtzee**: Game play is straightforward with clearly written prompts. Type ```[Q]uit``` or ```[H]elp``` at anytime throughout the program to exit or query a help card with game instructions.
+
+     To clear the stored game history type ```RESET``` at anypoint in the game. Alternately one can run ```./clear-score-log.sh``` from the ```src``` directory in the terminal window for the same results. 
+
+     ![help screen](./docs/yahtzee-help.png)
+******
+
+### Required dependencies:
+```
+colorama==0.4.6
+iniconfig==2.0.0
+packaging==23.1
+pluggy==1.0.0
+pyfiglet==0.8.post1
+pytest==7.3.1
+```
