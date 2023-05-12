@@ -1,8 +1,8 @@
 
-# Yahtzee!      
-### Benjamin Campbell • Assignment T1A3 • May 11, 2023
+# Yahtzee!
+![Yahtzee Game Screen Grab](./docs/yahtzee-title-screen.png)
+##### Benjamin Campbell • Assignment T1A3 • May 11, 2023  
 
-![Photo credit: Colin Davis *Unsplash*](./docs/yahtzee-title-screen.png)
 
 ## Project Links:
 - [Github Repository](https://github.com/bccbass/T1A3-src)
@@ -17,17 +17,21 @@ The code adheres to [Python PEP 8](https://peps.python.org/pep-0008/) convention
 
 ## Features:
 - ### Dice
-     The dice should be seamlessly intertwined with gameplay. They should be random and easy to navigate and interpret. Each turn is comprised of three rounds of dice roll. At each roll the play can select which dice to keep, which to roll again. There is also the option to end turn early (eg. after the first roll if it's a keeper). The gameplay is very similar to a round of poker with discards, hence I will be referring to the collection of 5 dice values as a hand throughout the project. Crafting this functionality will require a minimum of two parts: The logic and strategy for dice functionality and then integrating how the user interacts and manipulates dice throws.
+     The dice are intrinsically intertwined with gameplay. They are meant to be random and easy to navigate and interpret. Each turn is comprised of three rounds of dice rolling. In each round the player can select which dice to keep and which to roll again. There is also an option to end the turn early (eg. after the first roll if it's a keeper). Gameplay is very similar to a round of poker with discards, hence each collection of 5 dice values will be referred to as a hand throughout the project. Crafting this functionality required two main parts: The logic and strategy for dice functionality and the integration of how the user interacts and manipulates dice throws.
  
 
 - ### CLI User Interface:
-    CLI user interface controls the flow of the entire game and interaction between program and user. The aim is to make it fun and easy with as little barrier for play to the user as possible. Game should flow easily between rounds and turns. It should add and log categories seamlessly. It should have a clean and graceful finish by showing game history and score comparison, wish a congratulations and give option to play again or exit the app. Validation/exception handling will be imperative to ensure a smooth user experience.
+    CLI user interface controls the flow of the entire game and interaction between program and user. The aim was to make it fun and easy with as little barrier for gameplay as possible. The game aims to flow easily between rounds and turns. For every round the program logs and displays the updated score card. The wrap-up sequence strives to present a clean and graceful finish by showing individual game standing and all time champions, presenting corresponding messages to outcomes and offering the option to play again or exit the app. Validation and exception handling was imperative to ensuring a smooth user experience.
 
 - ### Game History Storage:
-    Logging game history for integration into gameplay is helpful to create a more personalized UX, it helps craft challenges and goals to give context and hopefully garner excitement. This functionality serves to remind user of their previous hight score and provides a personal and global ‘score to beat’. It helps to welcome back a return user or make an initial welcome statement to a new user.
+    Logging each players game history is helpful to create engagement, statefulness and a more personalized UX. It helps craft challenges and goals to give context and hopefully garner excitement. This functionality serves to alert users of new high scores and provides a global ‘score to beat’ in the form of an 'All Time Champions' table. It also allows personalized 'welcome back' messages for return users and initial welcome statements for new users.
 
-- ### Lower Half Of Card:
-    Lower half of card refers to the categories that can be checked off in a hand. Each category can only be claimed once, with the exception of Yahtzee which has no bounds, and increasing point value for each subsequent yahtzee rolled. The lower half of the card includes the following categories:
+- ### Lower Section Of Card:
+    The original Yahtzee card is comprised of an upper section and a lower section:
+
+    ![Original Yahtzee Card](./docs/original-yahtzee-card.png)
+
+    In the project the term Card refers to this table. Each category can only be claimed once, with the exception of Yahtzee which has no limits and increased point value for each subsequent yahtzee rolled. The lower half of the card includes the following categories:
     - 3 of a kind
     - 4 of a kind
     - Full House
@@ -38,13 +42,18 @@ The code adheres to [Python PEP 8](https://peps.python.org/pep-0008/) convention
     
         **Yahtzee is the only category that can have multiple entries*
     
-    This section requires logic to validate what categories a given hand falls into, and crafting interface between user and program to navigate choosing a hand and handling exceptions if a user tries to add to category while lacking the correct hand. Testing, exception handling and UI/UX are imperative for this section.
+    This feature section implements logic to validate what categories a given hand falls into, and provides an interface between user and program to navigate choosing a hand. A Test Driven Development approach was taken when creating category checking algorithms, with tests being written prior to functions. Extensive tests for checking algorithms were implemented using PyTest. 
 
 - ### UX: 
-    The UX should be easygoing and strive for a smooth flow. These concerns include mild graphical presentation, prompts, informational tables, a graphical representation of dice and game navigation.
+    The overall user experience (or UX) aimed to be easygoing, striving for a smooth flow. This necessitated implementation of mild graphical presentation, clear prompts and navigation, informational tables for player card, champion goard and help section, and most importantly a graphical representation of a hand of dice. The hand of dice were designed using ASCII characters and implementation drew heavily from a [tutorial by the unfortunately named 'Bro Code'](https://www.youtube.com/watch?v=x-Ag2_bJ40Y). 
 
 ## Implementation Plan:
-Planning and implementing the approach and execution was of paramount importance for the project. In the initial stages high level overviews of key features were utilized to help map the technical needs of implementation ([gameflow](./docs/gameflow.md),   [project file structure](./docs/project-file-structure.md)). A KANBAN approach was implemented and aided by a [Trello Board](https://trello.com/b/LXnmqhk8/terminal-app) to outline features and tasks, assign due dates and oversee development:
+Planning and implementing an approach to execution was of paramount importance for the project. In the initial stages high level overviews of key features were utilized to help map the technical needs of implementation ([gameflow](./docs/gameflow.md),   [project file structure](./docs/project-file-structure.md)). A KANBAN approach was implemented and aided by a [Trello Board](https://trello.com/b/LXnmqhk8/terminal-app) to outline features and tasks, assign due dates and oversee development:
+
+- ### Overview of Initial Trello:
+![overview](./docs/feature-progress/first-update/Screenshot%202023-05-05%20at%209.35.20%20AM.png)
+
+The trello layout contained a card for Features, General To-Do's, Doing, and Done. Each card has a back with more details for implemention. Due dates were added after a project schedule was ascertained in order to ensure smooth preject flow. 
 
 - ### Initial Features on Trello Board:
 ![feature 1](./docs/feature-progress/first-update/Screenshot%202023-05-05%20at%209.34.09%20AM.png)
@@ -52,12 +61,9 @@ Planning and implementing the approach and execution was of paramount importance
 ![feature 3](./docs/feature-progress/first-update/Screenshot%202023-05-05%20at%209.34.45%20AM.png)
 ![feature 4](./docs/feature-progress/first-update/Screenshot%202023-05-05%20at%209.35.01%20AM.png)
 
-Features each contained a list of actions necessary for implemenation and the overall feature had a due date attached.
+Features each contained a list of actions necessary for implemenation. A schedule was conceived with due dates attached to some features, however most due dates were associated with items on the general to-do list(Trello does not provide individual due dates for list items without premium membership). This was not the most elegant approach with regard to feature due dates and has been noted for future project management approach.
 
-- ### Overview of Trello:
-![overview](./docs/feature-progress/first-update/Screenshot%202023-05-05%20at%209.35.20%20AM.png)
-
-In addition to the Features and their corresponding actions, a to-do list of more general needs was created in the first stages as well. Each item contained a card with details for implemention as well as a due date to ensure smooth preject flow. 
+ 
 
 - ### Trello Resources:
 ![Resources](./docs/feature-progress/Screenshot%202023-05-11%20at%206.44.09%20PM.png)
@@ -99,7 +105,7 @@ At this stage from May 10, 2023 all of the main features have been implemented a
     ```
     Python 3.11.3
     ```  
-    If Python is not installed or is older lower than 3.10 please vist Python's [download page](https://www.python.org/downloads/) for more information including download access and installation instructions.  
+    If Python is not installed or version is lower than 3.10 please vist Python's [download page](https://www.python.org/downloads/) for more information including download access and installation instructions.  
 
     https://www.python.org/downloads/  
 
@@ -108,19 +114,27 @@ At this stage from May 10, 2023 all of the main features have been implemented a
 
 3. **Play Yahtzee**: 
      Open a new Terminal window and navigate to the src folder. This navigation is different depending on where a folder is located in the users home directory, however the navigation commands may look something like this:
-    ```
+    ```bash
      cd user/downloads/BenjaminCampbell_T1A3/src
     ```
 
     From ```src``` directory in any terminal window enter:
-    ```
+    ```bash
     ./yahtzee.sh
     ```
     This command will activate a virtual environment, install the required dependencies and run the program in python.
 
+    *Note: In some instances the bash permisions may need to be reset to allow execution. If permissions error occurs run the following commands from the src directory in the terminal window*
+    ```bash
+    chmod u+x ./yahtzee.sh
+
+    chmod u+x ./clear-score-log.sh
+    ```
+
+
 4. **Play Yahtzee**: Game play is straightforward with clearly written prompts. Type ```[Q]uit``` or ```[H]elp``` at anytime throughout the program to exit or query a help card with game instructions.
 
-     To clear the stored game history type ```RESET``` at anypoint in the game. Alternately one can run ```./clear-score-log.sh``` from the ```src``` directory in the terminal window for the same results. 
+     To clear the stored game history enter ```RESET``` at anypoint in the game. Alternately one can run ```./clear-score-log.sh``` from the ```src``` directory in the terminal window for the same results. 
 
      ![help screen](./docs/yahtzee-help.png)
 ******
