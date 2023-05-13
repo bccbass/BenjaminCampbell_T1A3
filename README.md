@@ -46,7 +46,7 @@ The code adheres to [Python PEP 8](https://peps.python.org/pep-0008/) convention
     This feature section implements logic to validate what categories a given hand falls into, and provides an interface between user and program to navigate choosing a hand. A Test Driven Development approach was taken when creating category checking algorithms, with tests being written prior to functions. Extensive tests for checking algorithms were implemented using PyTest. 
 
 - ### UX: 
-    The overall user experience (or UX) aimed to be easygoing, striving for a smooth flow. This necessitated implementation of mild graphical presentation, clear prompts and navigation, informational tables for player card, champion goard and help section, and most importantly a graphical representation of a hand of dice. The hand of dice were designed using ASCII characters and implementation drew heavily from a [tutorial by the unfortunately named 'Bro Code'](https://www.youtube.com/watch?v=x-Ag2_bJ40Y). 
+    The overall user experience (or UX) aimed to be easygoing, striving for a smooth flow. This necessitated implementation of mild graphical presentation, clear prompts and navigation, informational tables for player card, champion board and help section, and most importantly a graphical representation of a hand of dice. The hand of dice were designed using ASCII characters and implementation drew heavily from a [tutorial by the unfortunately named 'Bro Code'](https://www.youtube.com/watch?v=x-Ag2_bJ40Y). 
 
 ## Implementation Plan:
 Planning and implementing an approach to execution was of paramount importance for the project. In the initial stages high level overviews of key features were utilized to help map the technical needs of implementation ([gameflow](./docs/gameflow.md),   [project file structure](./docs/project-file-structure.md)). A KANBAN approach was implemented and aided by a [Trello Board](https://trello.com/b/LXnmqhk8/terminal-app) to outline features and tasks, assign due dates and oversee development:
@@ -54,7 +54,7 @@ Planning and implementing an approach to execution was of paramount importance f
 - ### Overview of Initial Trello:
 ![overview](./docs/feature-progress/first-update/Screenshot%202023-05-05%20at%209.35.20%20AM.png)
 
-The trello layout contained a card for Features, General To-Do's, Doing, and Done. Each card has a back with more details for implemention. Due dates were added after a project schedule was ascertained in order to ensure smooth preject flow. 
+The trello layout contained a card for Features, General To-Do's, Doing, and Done. Each card has a back with more details for development. Due dates were added after a project schedule was ascertained in order to ensure smooth project flow. 
 
 - ### Initial Features on Trello Board:
 ![feature 1](./docs/feature-progress/first-update/Screenshot%202023-05-05%20at%209.34.09%20AM.png)
@@ -62,7 +62,7 @@ The trello layout contained a card for Features, General To-Do's, Doing, and Don
 ![feature 3](./docs/feature-progress/first-update/Screenshot%202023-05-05%20at%209.34.45%20AM.png)
 ![feature 4](./docs/feature-progress/first-update/Screenshot%202023-05-05%20at%209.35.01%20AM.png)
 
-Features each contained a list of actions necessary for implemenation. A schedule was conceived with due dates attached to some features, however most due dates were associated with items on the general to-do list(Trello does not provide individual due dates for list items without premium membership). This was not the most elegant approach with regard to feature due dates and has been noted for future project management approach.
+Features each contained a list of actions necessary for implementation. A schedule was conceived with due dates attached to some features, however most due dates were associated with items on the general to-do list(Trello does not provide individual due dates for list items without premium membership). This was not the most elegant approach with regard to feature due dates and has been noted for future project management approach.
 
  
 
@@ -116,7 +116,7 @@ PyTest lent itself to the more algorithmic functions to decipher hands as well a
     ```
     Python 3.11.3
     ```  
-    If Python is not installed or version is lower than 3.10 please vist Python's [download page](https://www.python.org/downloads/) for more information including download access and installation instructions.  
+    If Python is not installed or version is lower than 3.10 please visit Python's [download page](https://www.python.org/downloads/) for more information including download access and installation instructions.  
 
     https://www.python.org/downloads/  
 
@@ -143,7 +143,7 @@ PyTest lent itself to the more algorithmic functions to decipher hands as well a
     ```
     This command will activate a virtual environment, install the required dependencies and run the program in python.
 
-    *Note: In some instances the bash permisions may need to be reset to allow execution. If permissions error occurs run the following commands from the src directory in the terminal window*
+    *Note: In some instances the bash permissions may need to be reset to allow execution. If permissions error occurs run the following commands from the src directory in the terminal window*
     ```bash
     chmod +x ./yahtzee.sh
 
@@ -153,7 +153,7 @@ PyTest lent itself to the more algorithmic functions to decipher hands as well a
 
 4. **Play Yahtzee**: Game play is straightforward with clearly written prompts. Type ```[Q]uit``` or ```[H]elp``` at anytime throughout the program to exit or query a help card with game instructions.
 
-     To clear the stored game history enter ```RESET``` at anypoint in the game. Alternately one can run ```./clear-score-log.sh``` from the ```src``` directory in the terminal window for the same results. 
+     To clear the stored game history enter ```RESET``` at any point in the game. Alternately one can run ```./clear-score-log.sh``` from the ```src``` directory in the terminal window for the same results. 
 
      ![help screen](./docs/yahtzee-help.png)
 ******
