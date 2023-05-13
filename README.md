@@ -15,6 +15,7 @@ The code adheres to [Python PEP 8](https://peps.python.org/pep-0008/) convention
 - ```tab``` indentation is utilized over ```spaces```
 - 'Kebab-case' is used for file names with multiple words
 
+
 ## Features:
 - ### Dice
      The dice are intrinsically intertwined with gameplay. They are meant to be random and easy to navigate and interpret. Each turn is comprised of three rounds of dice rolling. In each round the player can select which dice to keep and which to roll again. There is also an option to end the turn early (eg. after the first roll if it's a keeper). Gameplay is very similar to a round of poker with discards, hence each collection of 5 dice values will be referred to as a hand throughout the project. Crafting this functionality required two main parts: The logic and strategy for dice functionality and the integration of how the user interacts and manipulates dice throws.
@@ -84,6 +85,16 @@ Second update. Note a Bugs to Fix section was added to keep track of the many sn
 At this stage from May 10, 2023 all of the main features have been implemented and there is a working game that is very close to the MVP outlined in the [initial project proposal](./docs/initial-project-proposal.md). 
 
 
+## Testing and error handling:
+Error handling was of highest concern to ensure smooth and enjoyable game experience. Input error handling was implemented primarily by checking inputs for unexpected values and handling accordingly. Both try/except and conditional logic were used to safeguard against errors and unwanted game behaviour as well as to alert user of incorrect entries. Testing was carried out using both PyTest and a range of manual testing. Additional logic was implemented to check for the correct version of Python (3.10 or higher) as well as handling a missing or corrupted score-log.json file.  
+
+PyTest lent itself to the more algorithmic functions to decipher hands as well as some of the input validating functions. Manual testing was helpful to assess unexpected inputs and overall gameflow and UX/UI. Formal manual testing resulted in a refactoring of input parsing approach in order to account for global commands of ```[Q]uit```, ```[H]elp```, and ```[R]eset``` more gracefully. PyTests can be found found in the test_card.py and test_funcs.py files and can be run in the terminal by entering PyTest from the src directory. Manual test results:
+### Manual Test 1
+![here](./docs/yahtzeemanualtest-1.png) 
+### Manual Test 2
+![here](./docs/yahtzeemanualtest-2.png).
+
+
 ## Help Documentation:
 
 ### **System requirements:**
@@ -92,10 +103,10 @@ At this stage from May 10, 2023 all of the main features have been implemented a
 - Any Terminal application with a minimum view width of 110 columns
 
 **********
-### Setup configuration and Gameplay:  
+### Installation and Gameplay:  
 
 
-1. **Check Python Install Status**: In order to run Yahtzee Python 3.10 or higher must be installed.
+1. **Check Python Install Status**: Python 3.10 or higher must be installed to run Yahtzee.
 
     To check if Python is installed locally and verify current version:
     ```
@@ -110,25 +121,33 @@ At this stage from May 10, 2023 all of the main features have been implemented a
     https://www.python.org/downloads/  
 
 
-2. **Download and Install Yahtzee**: To install and play Yahtzee download the src directory directly from GitHub or locate it in the project directory after unzipping BenjaminCampbell_T1A3.zip.
+2. **Download and Install Yahtzee**: 
+    - Navigate to the [Github Repository](https://github.com/bccbass/T1A3-src)
+    - Locate the Code tab in the repository and select 'Download ZIP':
+
+        ![code tab](./docs/github-code.png)
+
+
+    - Alternatively you can click the download link [here](https://github.com/bccbass/T1A3-src/archive/refs/heads/main.zip) to start an immediate download.
+
 
 3. **Play Yahtzee**: 
      Open a new Terminal window and navigate to the src folder. This navigation is different depending on where a folder is located in the users home directory, however the navigation commands may look something like this:
-    ```bash
-     cd user/downloads/BenjaminCampbell_T1A3/src
-    ```
+        ```bash
+        cd user/downloads/BenjaminCampbell_T1A3/src
+        ```
 
     From ```src``` directory in any terminal window enter:
     ```bash
-    ./yahtzee.sh
+    bash yahtzee.sh
     ```
     This command will activate a virtual environment, install the required dependencies and run the program in python.
 
     *Note: In some instances the bash permisions may need to be reset to allow execution. If permissions error occurs run the following commands from the src directory in the terminal window*
     ```bash
-    chmod u+x ./yahtzee.sh
+    chmod +x ./yahtzee.sh
 
-    chmod u+x ./clear-score-log.sh
+    chmod +x ./clear-score-log.sh
     ```
 
 
