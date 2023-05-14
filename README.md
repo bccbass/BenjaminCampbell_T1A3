@@ -3,18 +3,22 @@
 ![Yahtzee Game Screen Grab](./docs/yahtzee-title-screen.png)
 ##### Benjamin Campbell • Assignment T1A3 • May 11, 2023  
 
+</br>
 
 ## Project Links:
 - [Github Repository](https://github.com/bccbass/T1A3-src)
 - [Project Management (Trello)](https://trello.com/b/LXnmqhk8/terminal-app)
 
   
+</br>
 
 ## Code Style Guide: 
 The code adheres to [Python PEP 8](https://peps.python.org/pep-0008/) conventions with the following caveats and specifications:
 - ```tab``` indentation is utilized over ```spaces```
 - 'Kebab-case' is used for file names with multiple words
+- Both OOP and functional programming approaches were taken with a concerted effort to keep code both readable and DRY.
 
+</br>
 
 ## Features:
 - ### Dice
@@ -47,6 +51,8 @@ The code adheres to [Python PEP 8](https://peps.python.org/pep-0008/) convention
 
 - ### UX: 
     The overall user experience (or UX) aimed to be easygoing, striving for a smooth flow. This necessitated implementation of mild graphical presentation, clear prompts and navigation, informational tables for player card, champion board and help section, and most importantly a graphical representation of a hand of dice. The hand of dice were designed using ASCII characters and implementation drew heavily from a [tutorial by the unfortunately named 'Bro Code'](https://www.youtube.com/watch?v=x-Ag2_bJ40Y). 
+
+</br>
 
 ## Implementation Plan:
 Planning and implementing an approach to execution was of paramount importance for the project. In the initial stages high level overviews of key features were utilized to help map the technical needs of implementation ([gameflow](./docs/gameflow.md),   [project file structure](./docs/project-file-structure.md)). A KANBAN approach was implemented and aided by a [Trello Board](https://trello.com/b/LXnmqhk8/terminal-app) to outline features and tasks, assign due dates and oversee development:
@@ -84,6 +90,8 @@ Second update. Note a Bugs to Fix section was added to keep track of the many sn
 
 At this stage from May 10, 2023 all of the main features have been implemented and there is a working game that is very close to the MVP outlined in the [initial project proposal](./docs/initial-project-proposal.md). 
 
+</br>
+
 
 ## Testing and error handling:
 Error handling was of highest concern to ensure smooth and enjoyable game experience. Input error handling was implemented primarily by checking inputs for unexpected values and handling accordingly. Both try/except and conditional logic were used to safeguard against errors and unwanted game behaviour as well as to alert user of incorrect entries. Testing was carried out using both PyTest and a range of manual testing. Additional logic was implemented to check for the correct version of Python (3.10 or higher) as well as handling a missing or corrupted score-log.json file.  
@@ -94,21 +102,31 @@ PyTest lent itself to the more algorithmic functions to decipher hands as well a
 ### Manual Test 2
 ![here](./docs/yahtzeemanualtest-2.png).
 
+</br>
+
 
 ## Help Documentation:
+### **Recommended Hardware Requirements:***
+- Modern Operating System:
+    - Windows 7 or 10
+    - Mac OS X 10.11 or higher, 64-bit
+    - Linux: RHEL 6/7, 64-bit (almost all libraries also work in Ubuntu)
+- x86 64-bit CPU (Intel / AMD architecture). ARM CPUs are not supported.
+- 4 GB RAM
+- 5 GB free disk space
+##### [*Entought](https://support.enthought.com/hc/en-us/articles/204273874-Enthought-Python-Minimum-Hardware-Requirements)
 
-### **System requirements:**
-- Any computer capable of running Python 3.10 or higher
-- Python 3.10 or higher installed on the machine
+### **Software Requirements:**
+- Python 3.10 or higher
 - Any Terminal application with a minimum view width of 110 columns
 
 **********
-### Installation and Gameplay:  
+### *Installation and Gameplay:  
 
 
 1. **Check Python Install Status**: Python 3.10 or higher must be installed to run Yahtzee.
 
-    To check if Python is installed locally and verify current version:
+    To check if Python is installed locally and verify current version open a new terminal window and enter:
     ```
     python --version
     ```
@@ -134,10 +152,10 @@ PyTest lent itself to the more algorithmic functions to decipher hands as well a
 3. **Play Yahtzee**: 
      Open a new Terminal window and navigate to the src folder. This navigation is different depending on where a folder is located in the users home directory, however the navigation commands may look something like this:
         ```bash
-        cd user/downloads/BenjaminCampbell_T1A3/src
+        cd user/downloads/T1A3-src
         ```
 
-    From ```src``` directory in any terminal window enter:
+    From within the ```T1A3-src``` directory in any terminal window enter:
     ```bash
     bash yahtzee.sh
     ```
