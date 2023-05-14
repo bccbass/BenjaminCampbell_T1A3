@@ -57,6 +57,9 @@ The code adheres to [Python PEP 8](https://peps.python.org/pep-0008/) convention
 ## Implementation Plan:
 Planning and implementing an approach to execution was of paramount importance for the project. In the initial stages high level overviews of key features were utilized to help map the technical needs of implementation ([gameflow](./docs/gameflow.md),   [project file structure](./docs/project-file-structure.md)). A KANBAN approach was implemented and aided by a [Trello Board](https://trello.com/b/LXnmqhk8/terminal-app) to outline features and tasks, assign due dates and oversee development:
 
+- ### Basic Gameflow:
+![yahtzee gameflow](./docs/Yahtzee-gameflow.png)
+
 - ### Overview of Initial Trello:
 ![overview](./docs/feature-progress/first-update/Screenshot%202023-05-05%20at%209.35.20%20AM.png)
 
